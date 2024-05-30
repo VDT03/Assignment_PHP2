@@ -1,0 +1,21 @@
+{
+    "name": "admin/mvc-oop",
+    "autoload": {
+        "psr-4": {
+            "Admin\\MvcOop\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Vu Duc Tai",
+            "email": "vutai0122@gmail.com"
+        }
+    ],
+    "require": {
+        "bramus/router": "^1.6",
+        "eftec/bladeone": "^4.13",
+        "doctrine/dbal": "^4.0",
+        "rakit/validation": "^1.4",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
