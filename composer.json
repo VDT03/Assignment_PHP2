@@ -3,7 +3,10 @@
     "autoload": {
         "psr-4": {
             "Admin\\MvcOop\\": "src/"
-        }
+        },
+        "files": [
+            "helper.php"
+        ]
     },
     "authors": [
         {
