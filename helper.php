@@ -1,4 +1,6 @@
-<?php 
+<?php
+
+const PATH_ROOT = __DIR__ . '/';
 
 if (!function_exists('asset')) {
     function asset($path) {
@@ -7,7 +9,34 @@ if (!function_exists('asset')) {
 }
 
 if (!function_exists('url')) {
-    function url($uri) {
+    function url($uri = null) {
         return $_ENV['BASE_URL'] . $uri;
+    }
+}
+
+if (!function_exists('is_logged')) { // Check đã đăng nhập
+    function is_logged() {
+        return isset($_SESSION['user']);
+    }
+}
+
+if (!function_exists('is_admin')) { // Check là admin
+    function is_admin() {
+        return is_logged() && $_SESSION['user']['role'] == '1';
+    }
+}
+
+if (!function_exists('avoid_login')) { // Bỏ qua trang Login khi đã đăng nhập
+    function avoid_login() {
+        if (is_logged()) {
+
+            if ($_SESSION['user']['role'] == '1') {
+                header('Location: ' . url('admin/') );
+                exit;
+            }
+            
+            header('Location: ' . url() );
+            exit;
+        }
     }
 }
