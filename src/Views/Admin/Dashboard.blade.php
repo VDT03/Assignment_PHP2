@@ -32,12 +32,12 @@
 
                     <div class="single_update_news">
                         <h5 class="byer_name  f_s_16 f_w_600 color_theme2">TAG</h5>
-                        <p class="color_gray f_s_12 f_w_700 ">Tổng số tag có trong database: {{ $news }} bản ghi</p>
+                        <p class="color_gray f_s_12 f_w_700 ">Tổng số tag có trong database: {{ $tags }} bản ghi</p>
                     </div>
 
                     <div class="single_update_news">
                         <h5 class="byer_name  f_s_16 f_w_600 color_theme2">TIN TỨC</h5>
-                        <p class="color_gray f_s_12 f_w_700 ">Tổng số tin tức có trong database: {{ $tags }} bản ghi</p>
+                        <p class="color_gray f_s_12 f_w_700 ">Tổng số tin tức có trong database: {{ $news }} bản ghi</p>
                     </div>
 
                     <div class="single_update_news">
